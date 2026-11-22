@@ -1,0 +1,19 @@
+:root {
+  --midnight: #090b13;
+  --navy: #151a2b;
+  --charcoal: #292b43;
+  --misty: #a7b8d8;
+  --lavender: #b9add9;
+  --lavender-mist: #d9d4ea;
+  --cloud: #e8eaf3;
+  --lilac: #f0edf7;
+  --silver: #aab9d1;
+
+  --glow: rgba(185, 173, 217, 0.35);
+  --glass: rgba(41, 43, 67, 0.45);
+  --glass-border: rgba(217, 212, 234, 0.14);
+
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --radius: 18px;
+  --header-h: 72px;
+}

@@ -1,0 +1,21 @@
+:root { --midnight:#090B13; --navy:#151A2B; --charcoal:#292B43; --misty:#A7B8D8; --lavender:#B9ADD9; --cloud:#E8EAF3; --silver:#AAB9D1; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; color: var(--cloud); font: 1rem/1.6 system-ui, sans-serif;
+  background: radial-gradient(circle at 20% 0%, rgba(185,173,217,.14), transparent 45%), linear-gradient(180deg, var(--midnight), var(--navy)); }
+[hidden] { display: none !important; }
+.doc__bar { position: sticky; top: 0; z-index: 5; display: flex; justify-content: space-between; align-items: center;
+  padding: .9rem clamp(1rem, 4vw, 3rem); background: rgba(9,11,19,.55); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(217,212,234,.1); }
+.doc__back { color: var(--misty); text-decoration: none; font-weight: 600; font-size: .9rem; }
+.doc__back:hover { color: var(--cloud); }
+.doc__brand { letter-spacing: .2em; text-transform: uppercase; font-size: .75rem; color: var(--silver); }
+.doc { max-width: 1000px; margin: 0 auto; padding: clamp(2rem, 6vh, 4rem) clamp(1rem, 4vw, 2rem) 4rem; }
+.doc__eyebrow { margin: 0 0 .6rem; font-size: .78rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--silver); }
+.doc__title { margin: 0 0 .8rem; font: 500 clamp(2rem, 5vw, 3.2rem)/1.05 Georgia, serif; }
+.doc__desc { margin: 0 0 1.6rem; color: var(--misty); max-width: 60ch; }
+.doc__actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-bottom: 1.6rem; }
+.doc__btn { padding: .65rem 1.3rem; border-radius: 999px; font-weight: 600; font-size: .88rem; text-decoration: none; color: var(--midnight);
+  background: linear-gradient(135deg, var(--lavender), var(--misty)); transition: transform .25s, box-shadow .25s; }
+.doc__btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(185,173,217,.35); }
+.doc__btn--ghost { color: var(--cloud); background: rgba(217,212,234,.08); border: 1px solid rgba(217,212,234,.2); }
+.doc__frame { width: 100%; height: 80vh; min-height: 480px; border: 1px solid rgba(217,212,234,.15); border-radius: 18px; background: var(--charcoal);
+  box-shadow: 0 20px 50px rgba(9,11,19,.5), 0 0 24px rgba(185,173,217,.1); }

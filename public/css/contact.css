@@ -1,0 +1,153 @@
+.contact {
+  position: relative;
+  padding: clamp(6rem, 14vh, 9rem) clamp(1.2rem, 4vw, 3rem) clamp(2.5rem, 6vh, 4rem);
+  overflow: hidden;
+  isolation: isolate;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(185, 173, 217, 0.14), transparent 55%),
+    radial-gradient(ellipse at 50% 100%, rgba(167, 184, 216, 0.1), transparent 55%),
+    linear-gradient(180deg, var(--midnight), var(--navy) 60%, var(--midnight));
+}
+.contact__inner { max-width: 1000px; margin-inline: auto; }
+
+.contact__eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0 0 1.2rem;
+  font: 600 0.8rem var(--font-ui);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--lavender);
+}
+.contact__eyebrow::before, .contact__eyebrow::after {
+  content: "";
+  width: clamp(2rem, 8vw, 5rem);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(217, 212, 234, 0.35));
+}
+.contact__eyebrow::after { transform: scaleX(-1); }
+
+.contact__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2rem, 4.4vw, 3.4rem);
+  line-height: 1.1;
+  background: linear-gradient(135deg, var(--cloud), var(--lavender));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.contact__people {
+  display: flex;
+  justify-content: center;
+  gap: clamp(2rem, 9vw, 7rem);
+  margin-top: clamp(2.5rem, 7vh, 4rem);
+}
+.person { margin: 0; }
+.person figcaption {
+  margin-top: 1.1rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+  letter-spacing: 0.01em;
+  color: var(--cloud);
+}
+
+.person__avatar {
+  position: relative;
+  width: clamp(140px, 18vw, 190px);
+  aspect-ratio: 1 / 1.1;
+  margin-inline: auto;
+  filter: drop-shadow(0 22px 28px rgba(0, 0, 0, 0.45));
+  animation: orb-float 7s ease-in-out infinite;
+  will-change: transform;
+}
+.person:nth-child(2) .person__avatar { animation-delay: -3.5s; }
+
+@keyframes orb-float {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50%      { transform: translate3d(0, -8px, 0); }
+}
+
+.orb {
+  position: absolute;
+  left: 50%;
+  border-radius: 50%;
+  border: 1px solid rgba(217, 212, 234, 0.28);
+  background:
+    radial-gradient(circle at 30% 22%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 32%),
+    radial-gradient(circle at 50% 55%, rgba(185, 173, 217, 0.3), rgba(41, 43, 67, 0.5) 62%, rgba(9, 11, 19, 0.7));
+  box-shadow:
+    inset 0 0 22px rgba(217, 212, 234, 0.3),
+    inset 0 -14px 26px rgba(9, 11, 19, 0.55),
+    0 0 46px rgba(185, 173, 217, 0.16);
+}
+.orb::after {
+  content: "";
+  position: absolute;
+  inset: 7% 14% 48% 12%;
+  border-radius: 50%;
+  border-top: 2px solid rgba(255, 255, 255, 0.35);
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  transform: rotate(-12deg);
+}
+.orb--head {
+  top: 0;
+  width: 50%;
+  aspect-ratio: 1;
+  transform: translateX(-50%);
+}
+.orb--body {
+  top: 57%;
+  width: 98%;
+  aspect-ratio: 1;
+  transform: translateX(-50%);
+  -webkit-mask-image: linear-gradient(180deg, #000 38%, transparent 56%);
+  mask-image: linear-gradient(180deg, #000 38%, transparent 56%);
+}
+
+.contact__rule {
+  height: 1px;
+  margin: clamp(2.5rem, 7vh, 4rem) auto;
+  border: 0;
+  background: linear-gradient(90deg, transparent, rgba(217, 212, 234, 0.3), transparent);
+}
+.contact__info {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.5rem, 4vw, 3rem);
+  margin: 0;
+  text-align: center;
+}
+.contact__info dt {
+  margin-bottom: 0.6rem;
+  font: 600 0.75rem var(--font-ui);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--lavender);
+}
+.contact__info dd {
+  margin: 0;
+  font: 0.95rem/1.7 var(--font-ui);
+  color: var(--misty);
+}
+.contact__info dd strong { color: var(--cloud); font-weight: 600; }
+
+.contact__foot {
+  margin: clamp(3rem, 8vh, 4.5rem) 0 0;
+  font: 0.78rem var(--font-ui);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--silver);
+  opacity: 0.75;
+}
+
+@media (max-width: 720px) {
+  .contact__info { grid-template-columns: 1fr; }
+  .contact__people { gap: 1.5rem; }
+}

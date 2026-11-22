@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Liquid-Pi: estación de trabajo de bajo costo con Raspberry Pi para ofimática, educación y programación.">
+  <meta name="theme-color" content="#090b13">
+  <title>Liquid-Pi</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,500&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/hero.css">
+  <link rel="stylesheet" href="/css/menu.css">
+  <link rel="stylesheet" href="/css/modal.css">
+  <link rel="stylesheet" href="/css/about.css">
+  <link rel="stylesheet" href="/css/apps.css">
+  <link rel="stylesheet" href="/css/services.css">
+    <link rel="stylesheet" href="/css/contact.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home">Liquid<span>-Pi</span></a>
+    <nav class="nav" id="site-nav" aria-label="Principal">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    
+    <button class="btn" id="open-login" type="button">Ingresar</button>
+    <button class="menu-btn" id="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+      <div class="waves waves--back" aria-hidden="true">
+        <svg viewBox="0 0 2400 200" preserveAspectRatio="none">
+          <path d="M0,100 C200,40 400,40 600,100 C800,160 1000,160 1200,100 C1400,40 1600,40 1800,100 C2000,160 2200,160 2400,100"/>
+          <path d="M0,120 C200,70 400,70 600,120 C800,170 1000,170 1200,120 C1400,70 1600,70 1800,120 C2000,170 2200,170 2400,120"/>
+        </svg>
+      </div>
+      <div class="waves waves--front" aria-hidden="true">
+        <svg viewBox="0 0 2400 200" preserveAspectRatio="none">
+          <path d="M0,90 C200,30 400,30 600,90 C800,150 1000,150 1200,90 C1400,30 1600,30 1800,90 C2000,150 2200,150 2400,90"/>
+          <path d="M0,115 C200,60 400,60 600,115 C800,170 1000,170 1200,115 C1400,60 1600,60 1800,115 C2000,170 2200,170 2400,115"/>
+          <path d="M0,140 C200,95 400,95 600,140 C800,185 1000,185 1200,140 C1400,95 1600,95 1800,140 C2000,185 2200,185 2400,140"/>
+        </svg>
+      </div>
+      <canvas id="particles" aria-hidden="true"></canvas>
+
+      <figure class="hero__product">
+        <img src="/img/producto.png" alt="Liquid-Pi: laptop de bajo costo con pantalla y teclado" fetchpriority="high">
+      </figure>
+
+      <div class="hero__content">
+        <h1 class="hero__slogan">
+          <span>Tan fluida</span>
+          <span>como el</span>
+          <span class="hero__accent">agua</span>
+        </h1>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#work">Ver apps</a>
+          <a class="btn" href="#about">Conocer el proyecto</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about__grid">
+
+        <div class="about__left">
+          <div class="reveal">
+            <p class="about__eyebrow">About</p>
+            <h2 class="about__title">Una laptop hecha para <em>empezar</em></h2>
+            <p class="about__text">
+              Liquid-Pi nació de una pregunta: ¿qué se puede hacer con una Raspberry Pi
+              que no esté ya hecho? La respuesta fue un computador portátil de bajo costo
+              para quienes dan sus primeros pasos en la informática: ofimática, navegación,
+              programación por bloques y desarrollo de software, con un escritorio ligero
+              y aplicaciones propias.
+            </p>
+          </div>
+
+          <figure class="card card--small reveal" style="--d: 0.15s">
+            <span class="card__num">/01</span>
+            <div class="card__media">
+              <div class="card__bg"></div>
+              <img src="/img/pantalla-base.webp" alt="Pantalla táctil y base con teclado de Liquid-Pi" loading="lazy">
+              <div class="card__shade"></div>
+              <figcaption class="card__caption">
+                <h3>hecha<br>a mano</h3>
+                <p>Madera, una lámina de cobre, ventilación y una Raspberry Pi 4.</p>
+              </figcaption>
+            </div>
+          </figure>
+        </div>
+
+        <figure class="card card--big reveal" style="--d: 0.3s">
+          <span class="card__num">/02</span>
+          <div class="card__media">
+            <div class="card__bg"></div>
+            <img src="/img/laptop-armada.webp" alt="Liquid-Pi armada como laptop, con su escritorio Xfce" loading="lazy">
+            <div class="card__shade"></div>
+            <figcaption class="card__caption">
+              <h3>una laptop<br>accesible</h3>
+              <p>Menos de COP 600.000 en total, pensada para estudiar, navegar y programar.</p>
+            </figcaption>
+          </div>
+        </figure>
+
+      </div>
+
+            <ul class="about__facts reveal">
+        <li><a href="https://www.raspberrypi.com/products/raspberry-pi-4-model-b/" target="_blank" rel="noopener noreferrer">Raspberry Pi 4</a></li>
+        <li><a href="https://www.xfce.org/" target="_blank" rel="noopener noreferrer">Xfce</a></li>
+        <li><a href="https://scratch.mit.edu/" target="_blank" rel="noopener noreferrer">Scratch</a></li>
+        <li><a href="https://www.rust-lang.org/" target="_blank" rel="noopener noreferrer">Rust</a></li>
+      </ul>
+
+   <section class="services" id="services" data-state="idle" data-side="right">
+  <h2 class="services__sr">Services</h2>
+
+   <div class="services__stage" aria-hidden="true">
+     <div class="services__glow"></div>
+     <div class="services__img services__img--soft"></div>
+     <div class="services__img services__img--blur"></div>
+     <div class="services__haze"></div>
+     <div class="services__img services__img--sharp"></div>
+     <div class="services__frame"></div>
+   </div>
+
+  <p class="services__pill reveal">Liquid-Pi · Services</p>
+
+  <div class="services__side">
+    <p class="services__count"><span id="svc-num">01</span> / <span id="svc-total">06</span></p>
+
+    <div class="services__copy" id="svc-copy" role="tabpanel">
+      <h3 class="services__title" id="svc-title"></h3>
+      <p class="services__text" id="svc-text"></p>
+    </div>
+
+    <div class="services__foot">
+      <p class="services__clock" id="svc-clock" aria-hidden="true">--:--:--</p>
+      <p class="services__note">Pensada para estudiar, programar y crear; no para juegos exigentes.</p>
+    </div>
+  </div>
+
+  <div class="services__tabs reveal" role="tablist" aria-label="Servicios" style="--d: 0.35s"></div>
+</section>
+
+    <section class="apps" id="work">
+      <div class="apps__head reveal">
+        <p class="apps__eyebrow">Apps</p>
+        <h2 class="apps__title">Hechas para <em>Liquid-Pi</em></h2>
+        <p class="apps__text">Pasa el mouse por una app para ver su documentación.</p>
+      </div>
+      <div class="apps__grid" id="apps-grid"></div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="contact__inner">
+        <p class="contact__eyebrow reveal">Créditos</p>
+        <h2 class="contact__title reveal">Proyecto elaborado por</h2>
+
+        <div class="contact__people">
+          <figure class="person reveal" style="--d: 0.1s">
+            <div class="person__avatar" aria-hidden="true">
+              <span class="orb orb--head"></span>
+              <span class="orb orb--body"></span>
+            </div>
+            <figcaption>Andru Salazar</figcaption>
+          </figure>
+
+          <figure class="person reveal" style="--d: 0.25s">
+            <div class="person__avatar" aria-hidden="true">
+              <span class="orb orb--head"></span>
+              <span class="orb orb--body"></span>
+            </div>
+            <figcaption>Breiner Rengifo</figcaption>
+          </figure>
+        </div>
+
+        <hr class="contact__rule">
+
+        <dl class="contact__info reveal">
+          <div>
+            <dt>Institución</dt>
+            <dd><strong>Institución Educativa José Hilario López</strong><br>Sede Central · Campoalegre, Huila</dd>
+          </div>
+          <div>
+            <dt>Formación</dt>
+            <dd><strong>SENA</strong><br>Técnico en Mantenimiento y Ensamble de Equipos Electrónicos</dd>
+          </div>
+          <div>
+            <dt>Instructores</dt>
+            <dd>Manuel Alejandro Gutiérrez Gutiérrez<br>Jesús Alberto González</dd>
+          </div>
+        </dl>
+
+        <p class="contact__foot">Liquid-Pi · 2026</p>
+      </div>
+    </section>
+
+  <dialog class="auth" id="login-dialog" aria-labelledby="auth-title">
+    <div class="auth__panel">
+      <button class="auth__close" type="button" aria-label="Cerrar">&times;</button>
+
+      <div class="auth__scroll">
+        <h2 class="auth__title" id="auth-title">Bienvenido</h2>
+        <p class="auth__sub">Accede para administrar y descargar apps de Liquid-Pi.</p>
+
+        <hr class="auth__rule">
+
+        <div class="auth__tabs" role="tablist">
+          <button class="auth__tab" type="button" role="tab" data-mode="login" aria-selected="true">Ingresar</button>
+          <button class="auth__tab" type="button" role="tab" data-mode="register" aria-selected="false">Crear cuenta</button>
+        </div>
+
+        <div class="auth__social">
+          <button class="auth__btn" type="button" data-social="google">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#A7B8D8" d="M21.6 12.2c0-.7-.1-1.3-.2-1.9H12v3.6h5.4a4.6 4.6 0 0 1-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.2z"/>
+              <path fill="#B9ADD9" d="M12 22c2.7 0 5-.9 6.6-2.4l-3.2-2.5c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.6A10 10 0 0 0 12 22z"/>
+              <path fill="#D9D4EA" d="M6.4 13.9a6 6 0 0 1 0-3.8V7.5H3.1a10 10 0 0 0 0 9z"/>
+              <path fill="#AAB9D1" d="M12 6c1.5 0 2.8.5 3.8 1.5l2.9-2.9A10 10 0 0 0 3.1 7.5l3.3 2.6C7.2 7.8 9.4 6 12 6z"/>
+            </svg>
+            Continuar con Google
+          </button>
+        </div>
+
+        <div class="auth__divider">o con tu correo</div>
+
+        <form class="auth__form" id="auth-form" novalidate>
+          <div class="auth__field" id="field-name" hidden>
+            <label for="in-name">Nombre</label>
+            <input id="in-name" name="displayName" type="text" autocomplete="name" maxlength="50" placeholder="Tu nombre">
+          </div>
+          <div class="auth__field">
+            <label for="in-email">Correo</label>
+            <input id="in-email" name="email" type="email" autocomplete="email" maxlength="254" placeholder="tucorreo@gmail.com" required>
+          </div>
+          <div class="auth__field">
+            <label for="in-pass">Contraseña</label>
+            <input id="in-pass" name="password" type="password" autocomplete="current-password" maxlength="128" placeholder="Mínimo 10 caracteres" required>
+          </div>
+          <p class="auth__msg" id="auth-msg" role="status" aria-live="polite"></p>
+          <hr class="auth__rule" style="margin: 0.2rem 0 0.4rem">
+          <button class="btn btn--primary auth__submit" id="auth-submit" type="submit">Ingresar</button>
+        </form>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="auth docview" id="doc-dialog" aria-labelledby="docview-title">
+  <div class="auth__panel docview__panel">
+    <button class="auth__close" type="button" aria-label="Cerrar">&times;</button>
+
+    <header class="docview__head">
+      <p class="docview__tag" id="docview-tag"></p>
+      <h2 class="docview__title" id="docview-title"></h2>
+    </header>
+
+    <hr class="auth__rule">
+
+    <div class="docview__body" id="docview-body"></div>
+
+    <div class="docview__actions">
+      <a class="btn" id="docview-open" href="#" target="_blank" rel="noopener">Abrir en pestaña nueva</a>
+      <a class="btn btn--primary" id="docview-download" href="#">Descargar PDF</a>
+    </div>
+  </div>
+</dialog>
+
+  <script src="/js/particles.js" defer></script>
+  <script src="/js/main.js" defer></script>
+  <script src="/js/auth.js" defer></script>
+  <script src="/js/parallax.js" defer></script>
+  <script src="/js/apps-data.js" defer></script>
+  <script src="/js/apps.js" defer></script>
+  <script src="/js/docview.js" defer></script>
+  <script src="/js/reveal.js" defer></script>
+  <script src="/js/services.js" defer></script>
+  <script src="/js/menu.js" defer></script>
+</body>
+</html>
